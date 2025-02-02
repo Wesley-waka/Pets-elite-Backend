@@ -26,6 +26,11 @@ mongoose.connect(MONGO_URI, {
   useUnifiedTopology: true
 });
 
+app.get('/',(req,res)=>{
+ res.send('We are up and running')   
+       
+})
+
 
 // const Pet = mongoose.model('User', PetSchema);
 
@@ -86,3 +91,5 @@ app.get('/api/blogs/:id', async (req, res) => {
 app.listen(3000, () => {
   console.log('Server is running on port 3001');
 });
+
+module.exports = app;
