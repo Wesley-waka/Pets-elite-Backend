@@ -15,8 +15,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(
     cors({
-        origin: ["*"],
-        credentials: true,
+        origin: "*",
+        credentials: false,
     })
 );
 
